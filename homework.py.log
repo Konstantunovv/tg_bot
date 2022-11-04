@@ -1,2 +1,0 @@
-[2022-11-04 10:43:28,457] [DEBUG bot_logger] [homework:get_api_answer > 69] > Опрашиваем Yandex Homework API
-[2022-11-04 10:43:30,390] [DEBUG bot_logger] [homework:send_message > 59] > Сообщение отправлено: Изменился статус проверки работы "Konstantunovv__homework_bot.zip". Работа проверена: ревьюеру всё понравилось. Ура!
