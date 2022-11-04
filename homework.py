@@ -101,11 +101,15 @@ def check_response(response):
 
 def parse_status(homework):
     """Парсинг ответа API и проверка наличия нужных ключей и статусов."""
+    project_sprint = homework['lesson_name']
     name = homework["homework_name"]
     status = homework["status"]
+    comment = homework['reviewer_comment']
+    if len(comment) == 0:
+        raise ValueError(KEY_ERROR.format(comment))
     if status not in HOMEWORK_VERDICTS:
         raise ValueError(KEY_ERROR.format(status))
-    return PARSE_STATUS_RETURN.format(name, HOMEWORK_VERDICTS[status])
+    return PARSE_STATUS_RETURN.format(project_sprint,name,HOMEWORK_VERDICTS[status],comment)
 
 
 def check_tokens():
